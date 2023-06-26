@@ -100,36 +100,19 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'verceldb',
-#         'USER': 'default',
-#         'PASSWORD': 'ZlJE8mV4rkRH',
-#         'HOST': 'ep-small-boat-341394-pooler.ap-southeast-1.postgres.vercel-storage.com',
-#         'POST': '5432'
-#     }
-# }
-
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "mydatabase",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'JbAhOgK9ewDdnEZGd9nk',
+        'HOST': 'containers-us-west-203.railway.app',
+        'POST': '6729'
     }
 }
 
-DATABASES['default'] = dj_database_url.config()
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'sql12628760',
-#         'USER': 'sql12628760',
-#         'PASSWORD': 'a6f2MpeAYb',
-#         'HOST': 'sql12.freemysqlhosting.net	',
-#         'PORT': '3306',
-#     }
-# }
+DATABASE_URL = "postgresql://postgres:JbAhOgK9ewDdnEZGd9nk@containers-us-west-203.railway.app:6729/railway"
+DATABASES['default'] = dj_database_url.config(default=DATABASE_URL)
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [

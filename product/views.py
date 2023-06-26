@@ -31,7 +31,7 @@ class ProductFilter(filters.FilterSet):
 
     class Meta:
         model = Product
-        fields = ['min_price', 'max_price']
+        fields = ['min_price', 'max_price', 'brand', 'type']
 
 
 class ProductViewSet(viewsets.ModelViewSet):
@@ -41,8 +41,8 @@ class ProductViewSet(viewsets.ModelViewSet):
     pagination_class = ProductPagination
     filter_backends = [SearchFilter, OrderingFilter, filters.DjangoFilterBackend]
     filterset_class = ProductFilter
-    filterset_fields = ['id', 'brand', 'type']
-    search_fields = ['name']
+    # filterset_fields = ['id', 'brand', 'type']
+    search_fields = ['name', 'brand']
     ordering_fields = '__all__'
 
     def list(self, request, *args, **kwargs):
