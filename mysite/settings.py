@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-!o)b01^susd7^1pt0q*^f5u!^c#%fj-3rpgfwwkhu7wxtxi20r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = [
+                '127.0.0.1',
+                '.vercel.app',
+                # '.now.sh'
+             ]
 
 
 # Application definition
@@ -94,23 +98,34 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "mydatabase",
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'phone_info',
-#         'USER': 'root',
-#         'PASSWORD': '',
-#         'HOST': 'localhost',
-#         'PORT': '3306',
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'verceldb',
+#         'USER': 'default',
+#         'PASSWORD': 'ZlJE8mV4rkRH',
+#         'HOST': 'ep-small-boat-341394-pooler.ap-southeast-1.postgres.vercel-storage.com',
+#         'POST': '5432'
 #     }
 # }
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": "mydatabase",
+#     }
+# }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sql12628760',
+        'USER': 'sql12628760',
+        'PASSWORD': 'a6f2MpeAYb',
+        'HOST': 'sql12.freemysqlhosting.net	',
+        'PORT': '3306',
+    }
+}
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
@@ -163,3 +178,6 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=30),  # Thời gian sống 30 ngày
     'REFRESH_TOKEN_LIFETIME': timedelta(days=30),  # Thời gian sống 30 ngày
 }
+
+WSGI_APPLICATION = 'vercel_app.wsgi.app'
+
