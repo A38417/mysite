@@ -109,23 +109,23 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 #     }
 # }
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": "mydatabase",
-#     }
-# }
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sql12628760',
-        'USER': 'sql12628760',
-        'PASSWORD': 'a6f2MpeAYb',
-        'HOST': 'sql12.freemysqlhosting.net	',
-        'PORT': '3306',
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": "mydatabase",
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'sql12628760',
+#         'USER': 'sql12628760',
+#         'PASSWORD': 'a6f2MpeAYb',
+#         'HOST': 'sql12.freemysqlhosting.net	',
+#         'PORT': '3306',
+#     }
+# }
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
