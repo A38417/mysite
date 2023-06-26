@@ -3,3 +3,4 @@ djangorestframework==3.14.0
 django-cors-headers==4.1.0
 djangorestframework-simplejwt==5.2.2
 django-filter==23.2
+sqlite==3.41.2
