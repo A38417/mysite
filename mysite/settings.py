@@ -108,7 +108,7 @@ DATABASES = {
     }
 }
 
-DATABASE_URL = "postgresql://postgres:JbAhOgK9ewDdnEZGd9nk@containers-us-west-203.railway.app:6729/railway"
+DATABASE_URL = "postgresql://postgres:EdBZeOHUwa42F3TRquUM@containers-us-west-18.railway.app:7731/railway"
 DATABASES['default'] = dj_database_url.config(default=DATABASE_URL)
 
 CORS_ALLOW_ALL_ORIGINS = True
